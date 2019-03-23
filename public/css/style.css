@@ -1,0 +1,27 @@
+
+body {
+    background-image: url("../images/background.png");
+  }
+.jumbotron {
+	background: url(../images/news.jpg) no-repeat center center;
+    background-size: cover;
+    height: 1000px;
+}
+
+.main {
+	position: relative;
+	top: 400px;
+	text-align: center;
+}
+
+.btn-primary {
+	background-color: lightslategray;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	letter-spacing: 1.3px;
+	padding: 18px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
