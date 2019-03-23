@@ -24,7 +24,7 @@ var NewsSchema = new Schema({
                 return input.length >= 6;
             },
             // Error Message
-            "Longstring should be longer."
+            "Article text should be longer."
         ]
     },
     link: {
