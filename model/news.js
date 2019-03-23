@@ -49,7 +49,7 @@ var NewsSchema = new Schema({
 // Custom method `coolifier`
 NewsSchema.methods.coolifier = function () {
     // Adds "...theCoolest" to the end of the current user's username
-    this.headline = this.headline + "...the Coolest!";
+    this.headline = this.headline + "...this is the best place to go!";
     // Return the new username
     return this.headline;
 };
