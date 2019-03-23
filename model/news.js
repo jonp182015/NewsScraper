@@ -30,7 +30,7 @@ var NewsSchema = new Schema({
     link: {
         type: String,
         trim: true,
-        //required: "Link is Required"
+        required: "Link is Required"
     },
     imgURL: {
         type: String,
