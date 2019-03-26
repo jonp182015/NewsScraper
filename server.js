@@ -1,10 +1,3 @@
-//must use: 
-//express
-//mongoose
-
-//express-handlebars
-//cheerio
-//anxios
 
 // Dependencies
 var mongoose = require("mongoose");
@@ -14,7 +7,7 @@ var express = require("express");
 var app = express();
 
 // Port
-var PORT = process.env.PORT || 3003;
+var PORT = process.env.PORT || 3001;
 
 // Set up a static folder (public) for our web app
 app.use(express.static("public"));
