@@ -13,7 +13,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
-  
+
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -30,18 +30,66 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/saved">Saved articles</a>
+          <a class="nav-link" href="/saved">Saved Articles</a>
+        </li>
+        <li class="nav-item scrape-btn">
+          <a class="nav-link" href="/scrape">Scrape new articles</a>
+        </li>
+        <li class="nav-item clear-btn">
+          <a class="nav-link" href="/clearAll">Clear articles</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <div class="jumbotron">
-    <div class="container">
-      <div class="main">
-        <a href="#" class="btn-primary">Scrape</a>
-      </div>
+  <div class="jumbotron text-center">
+    <div class="overlay">
     </div>
+    <div class="background-image">
+    </div>
+    <div class="caption">
+      <h1>News Scraper</h1>
+      <p>CNN Edition</p>
+    </div>
+  </div>
+
+  <div class="container-fluid article-container">
+      <form action="/submit" method="post">
+        <h1>Hi User!</h1>
+        <h2>Enter a Note!</h2>
+        <input type="text" name="title" placeholder="Title">
+        <textarea type="text" name="body" placeholder="Write Note Here"></textarea>
+    
+        <input type="submit">
+        <a href="/notes">See your notes!</a>
+        <a href="/user">See your profile!</a>
+        <a href="/populateduser">See your profile, populated with notes!</a>
+      </form>
+    <!--
+    <div class="card">
+      <div class="card-header">
+        <h3>
+          <a class="article-link" target="_blank" rel="noopener noreferrer"
+            href="https://www.nytimes.com/2019/03/23/opinion/sunday/britain-brexit.html">Britain Is Drowning Itself in
+            Nostalgia</a>
+          <a class="btn btn-success save">Save Article</a>
+        </h3>
+      </div>
+      <div class="card-body">Brexit has exposed my country as a solipsistic backwater.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>
+          <a class="article-link" target="_blank" rel="noopener noreferrer"
+            href="https://www.nytimes.com/2019/03/24/books/the-week-in-books.html">The Week in Books</a>
+          <a class="btn btn-success save">Save Article</a>
+        </h3>
+      </div>
+      <div class="card-body">The lives of Supreme Court justices, a poet’s treacherous trip to El Salvador,
+        Mueller-related reading and more.</div>
+    </div>
+  -->
   </div>
 
 
@@ -63,6 +111,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="app.js"></script>
 </body>
 

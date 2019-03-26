@@ -13,7 +13,8 @@ var NewsSchema = new Schema({
     headline: {
         type: String,
         trim: true,
-        required: "Headline is Required"
+        unique: true,
+        //required: "Headline is Required"
     },
     articleText: {
         type: String,
@@ -30,18 +31,24 @@ var NewsSchema = new Schema({
     link: {
         type: String,
         trim: true,
-        required: "Link is Required"
+        //required: "Link is Required"
     },
     imgURL: {
         type: String,
         trim: true,
         //required: "imgURL Required"
     },
+    note: {
+        type: Schema.Types.ObjectId,
+        //The objectIds will refer to the ids in the note model
+        ref: "Note"
+    },
     read: false,
     dateCreated: {
         type: Date,
         default: Date.now
     },
+
 });
 
 // Custom Instance Methods
